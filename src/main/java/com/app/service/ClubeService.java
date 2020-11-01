@@ -20,6 +20,10 @@ public class ClubeService {
 		salvar(leitor);
 	}
 	
+	public void exclusao(Scanner leitor) {
+		excluir(leitor);
+	}
+	
 	private void salvar(Scanner leitor) {
 		System.out.println("Nome do time");
 
@@ -34,4 +38,35 @@ public class ClubeService {
 		
 		System.out.println("Salvo");
 	}
+	
+	
+	private void excluir(Scanner leitor) {
+		System.out.println("Nome do id");
+
+		long id = leitor.nextLong();
+		Clube clube = new Clube();
+	
+		clube.setId(id);
+	
+		
+		clubeRepository.delete(clube);
+		
+		System.out.println("Excluido");
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

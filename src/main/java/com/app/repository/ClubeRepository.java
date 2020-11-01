@@ -9,4 +9,6 @@ import com.app.model.Clube;
 public interface ClubeRepository extends CrudRepository <Clube, Long> {
 	
 	
+	
+	
 }

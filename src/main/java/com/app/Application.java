@@ -37,7 +37,19 @@ public class Application implements CommandLineRunner {
 			int action = leitor.nextInt();
 			if (action == 1) {
 				clubeService.inicial(leitor);
-			} else {
+				
+				
+				
+			}
+			
+			if (action == 2) {
+				clubeService.exclusao(leitor);
+				
+				
+				
+			}
+			else {
+				
 				system = false;
 			}
 		}
