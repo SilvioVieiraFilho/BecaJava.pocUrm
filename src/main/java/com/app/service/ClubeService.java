@@ -22,10 +22,16 @@ public class ClubeService {
 	
 	private void salvar(Scanner leitor) {
 		System.out.println("Nome do time");
+
 		String nome = leitor.next();
 		Clube clube = new Clube();
+		System.out.println("Escreva numero de pontos");
+		int pontos = leitor.nextInt();
 		clube.setNome(nome);
+		clube.setPontos(pontos);
+		
 		clubeRepository.save(clube);
+		
 		System.out.println("Salvo");
 	}
 }
